@@ -1,0 +1,24 @@
+
+<mat-card class="example-card" [style.backgroundColor]="'lightgrey'" >
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Moyenne d'âge</mat-card-title>
+    <mat-card-subtitle>En année</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-progress-spinner
+      class="example-margin"
+      [color]="color"
+      [mode]="mode"
+      [value]="value">
+    </mat-progress-spinner>
+    <div style="position:relative; top: -60px; left: 150px;">
+      {{this.value}}
+    </div>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="getNbPost()"
+            matTooltip="Refresh la moyenne d'âge des utilisateurs">REFRESH</button>
+  </mat-card-actions>
+</mat-card>

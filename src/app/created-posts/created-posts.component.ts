@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {GetDataService} from "../services/get-data.service";
 
 @Component({
@@ -13,20 +13,21 @@ export class CreatedPostsComponent implements OnInit {
   nb_homme = 0;
   nb_femme = 0;
 
-  constructor(private getDataS: GetDataService) { }
+  constructor(private getDataS: GetDataService) {
+  }
 
-  getAverageAge(){
-    this.getDataS.getAverageAge((err,res)=>{
-      if(err){
+  getAverageAge() {
+    this.getDataS.getAverageAge((err, res) => {
+      if (err) {
         console.error(err);
       }
       this.value = res;
     })
   }
 
-  getAverageGender(){
-    this.getDataS.getAverageGender((err,res)=>{
-      if(err){
+  getAverageGender() {
+    this.getDataS.getAverageGender((err, res) => {
+      if (err) {
         console.error(err);
       }
       this.nb_homme = res.nb_homme;
@@ -34,12 +35,33 @@ export class CreatedPostsComponent implements OnInit {
     })
   }
 
+  getTopPostsCreator() {
+    this.getDataS.getTopPostsCreator(3, (err, res) => {
+      console.log(res.users)
+      if (err) {
+        console.error(err);
+      }
+      for (let u of res.users) {
 
-  refresh(){
-    this.getAverageAge();
-    this.getAverageGender();
+        this.getDataS.getUserById(u, (err, user) => {
+          if (err) {
+            return console.log(err);
+          }
+          console.log("get ->");
+          console.log(user)
+        });
+
+
+      }
+    })
   }
 
+
+  refresh() {
+    this.getAverageAge();
+    this.getAverageGender();
+    this.getTopPostsCreator();
+  }
 
 
   ngOnInit() {

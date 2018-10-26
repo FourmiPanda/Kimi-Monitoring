@@ -1,7 +1,6 @@
-<div class="container">
-
-  <div class="row">
-    <div class="col-md-11">
+<div class="app-user-panel" style="height: 100vh;">
+  <div fxLayout="column" fxLayoutAlign="space-between stretch" >
+    <div fxLayout="row" fxLayoutAlign="space-between start" >
       <div class="card" style="width: 20rem;">
         <!--<img class="card-img-top image" [src]="user.image" alt="Card image cap">-->
         <div class="svg-wrapper">
@@ -15,20 +14,15 @@
           <p class="card-text">Kimi Monitoring </p>
         </div>
       </div>
+      <div><button mat-button color="primary" style="background-color: white" (click)="logout()">Logout</button></div>
     </div>
 
-
-    <div class="col-md-1">
-      <button type="button" (click)="logout()" class="btn btn-link">Logout</button>
-    </div>
-    <div class="col-md-9 col-md-offset-1">
+    <div style="background-color:darkgray; ">
       <app-created-posts></app-created-posts>
     </div>
-    <div style="height: 10px" class="col-md-12">
+    <div style="background-color: pink; height: 50px">comp2</div>
+    <div style="background-color: navajowhite; height: 50px">comp3</div>
 
-    </div>
-    <div class="col-md-9 col-md-offset-1">
-      <app-created-posts></app-created-posts>
-    </div>
   </div>
+
 </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AngularFirestore, AngularFirestoreCollection} from "@angular/fire/firestore";
+import {GetDataService} from "../services/get-data.service";
 
 @Component({
   selector: 'app-created-posts',
@@ -7,29 +7,43 @@ import {AngularFirestore, AngularFirestoreCollection} from "@angular/fire/firest
   styleUrls: ['./created-posts.component.css']
 })
 export class CreatedPostsComponent implements OnInit {
-  color = 'primary';
+  color = 'accent';
   mode = 'determinate';
   value = 0;
+  nb_homme = 0;
+  nb_femme = 0;
 
-  constructor(private afs: AngularFirestore) { }
+  constructor(private getDataS: GetDataService) { }
 
-  getNbPost(){
-    this.afs.collection("usersInfos").get().subscribe((posts)=> {
-      let total_age = 0;
-      let nb = 0;
-      for (let entry of posts.docs) {
-        let entry_age = entry.get("age");
-        total_age =  total_age + entry_age;
-        nb++;
+  getAverageAge(){
+    this.getDataS.getAverageAge((err,res)=>{
+      if(err){
+        console.error(err);
       }
-      this.value = total_age/nb
-    },(err) => {
-      console.error(err);
-    });
+      this.value = res;
+    })
   }
 
+  getAverageGender(){
+    this.getDataS.getAverageGender((err,res)=>{
+      if(err){
+        console.error(err);
+      }
+      this.nb_homme = res.nb_homme;
+      this.nb_femme = res.nb_femme;
+    })
+  }
+
+
+  refresh(){
+    this.getAverageAge();
+    this.getAverageGender();
+  }
+
+
+
   ngOnInit() {
-    this.getNbPost()
+    this.refresh();
   }
 
 }

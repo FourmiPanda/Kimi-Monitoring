@@ -6,6 +6,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
+import { FlexLayoutModule, BREAKPOINT} from '@angular/flex-layout';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { UserResolver } from './user/user.resolver';
@@ -14,6 +15,7 @@ import { AuthService } from './core/auth.service';
 import { UserService } from './core/user.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
@@ -31,6 +33,8 @@ import { CreatedPostsComponent } from './created-posts/created-posts.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
+    MatProgressBarModule,
     MatProgressSpinnerModule,
     MatCardModule,
     MatButtonModule,

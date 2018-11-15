@@ -21,14 +21,12 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 
 import { AppComponent } from './app.component';
-import { CreatedPostsComponent } from './created-posts/created-posts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    UserComponent,
-    CreatedPostsComponent
+    UserComponent
   ],
   imports: [
     BrowserModule,

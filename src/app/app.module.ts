@@ -6,7 +6,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
-import { FlexLayoutModule, BREAKPOINT} from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { UserResolver } from './user/user.resolver';
@@ -19,6 +19,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 
@@ -36,6 +38,8 @@ import { AppComponent } from './app.component';
     MatProgressSpinnerModule,
     MatCardModule,
     MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
     ReactiveFormsModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: false }),
     AngularFireModule.initializeApp(environment.firebase),

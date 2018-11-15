@@ -12,16 +12,15 @@ import { FirebaseUserModel } from '../core/user.model';
   styleUrls: ['user.scss']
 })
 
-export class UserComponent implements OnInit{
+export class UserComponent implements OnInit {
 
   user: FirebaseUserModel = new FirebaseUserModel();
-  profileForm: FormGroup;
 
   constructor(
     public userService: UserService,
     public authService: AuthService,
     private route: ActivatedRoute,
-    private location : Location,
+    private location: Location,
     private fb: FormBuilder
   ) {
 
@@ -29,27 +28,22 @@ export class UserComponent implements OnInit{
 
   ngOnInit(): void {
     this.route.data.subscribe(routeData => {
-      let data = routeData['data'];
+      const data = routeData['data'];
       if (data) {
         this.user = data;
-        this.createForm(this.user.name);
       }
-    })
-  }
-
-  createForm(name) {
-    this.profileForm = this.fb.group({
-      name: [name, Validators.required ]
     });
   }
 
 
-  logout(){
+
+
+  logout() {
     this.authService.doLogout()
     .then((res) => {
       this.location.back();
     }, (error) => {
-      console.log("Logout error", error);
+      console.log('Logout error', error);
     });
   }
 }

@@ -1,24 +1,52 @@
 <div class="app-user-panel" style="height: 100vh;">
-  <div fxLayout="column" fxLayoutAlign="space-between stretch" >
-    <div fxLayout="row" fxLayoutAlign="space-between start" >
-      <div class="card" style="width: 20rem;">
-        <!--<img class="card-img-top image" [src]="user.image" alt="Card image cap">-->
-        <div class="svg-wrapper">
-          <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-            <rect class="shape" height="60" width="320" />
-          </svg>
-          <div class="text">Kimi Monitoring</div>
-        </div>
-        <div *ngIf='user.provider != "password"'class="card-body">
-          <h4 class="card-title">{{user.name}}</h4>
-          <p class="card-text">Kimi Monitoring </p>
+  <div fxLayout="column">
+    <div>
+      <mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <div fxLayout="row" fxFlex="80" fxLayoutAlign="start center">
+            <div>
+              <span>Kimi Monitoring</span>
+            </div>
+          </div>
+          <div fxLayout="row" fxFlex="20" fxLayoutAlign="end center">
+            <div>
+              <button mat-raised-button color="accent" (click)="logout()">Logout</button>
+            </div>
+            <div>
+              <button mat-icon-button>
+                <mat-icon class="example-icon">settings</mat-icon>
+              </button>
+            </div>
+          </div>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </div>
+    <div fxLayout="row">
+      <div fxLayout="row" fxFlex="20">
+        <div *ngIf='user.provider != "password"'>
+          <mat-card class="example-card">
+              <div fxLayout="row" fxLayoutGap="10px">
+                <div><img class="profile-picture" src="{{user.image}}"></div>
+                <div fxLayout="column">
+                  <div>
+                    <mat-card-title>{{user.name}}</mat-card-title>
+                  </div>
+                  <div>
+                    <mat-card-subtitle>Docteur</mat-card-subtitle>
+                  </div>
+                </div>
+              </div>
+            <mat-card-actions>
+              <button mat-button>MORE</button>
+            </mat-card-actions>
+          </mat-card>
         </div>
       </div>
-      <div><button mat-raised-button color="accent" (click)="logout()">Logout</button></div>
+      <div fxLayout="row" fxFlex="80">
+        <div> MAIN</div>
+      </div>
     </div>
-
-
-
   </div>
+
 
 </div>

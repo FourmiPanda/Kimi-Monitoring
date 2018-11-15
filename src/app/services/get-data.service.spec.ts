@@ -22,9 +22,15 @@ describe('GetDataService', () => {
   });
 
   it('should get average age', (done: DoneFn) => {
+    console.log('GET AVERAGE AGE');
     const service: GetDataService = TestBed.get(GetDataService);
-    //TODO: Real test
-    done();
+    // TODO: Real test
+    service.getAverageAge((err, res) => {
+      console.log('CALLBACK');
+      console.log(err);
+      expect(err).toBe('null');
+      done();
+    });
   });
 
 

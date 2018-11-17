@@ -19,6 +19,13 @@ export class DashboardComponent implements OnInit {
       }
       console.log(res);
     });
+    this.getDataService.getAverageGender((err, res) => {
+      console.log('Test getAverageGender ->');
+      if (err) {
+        return console.error(err);
+      }
+      console.log(res);
+    });
     this.getDataService.getUserById('YZ40aAkesnQdEf5zHwQUOdGbDHJ3', (err, res) => {
       console.log('Test getUserById ->');
       if (err) {
@@ -26,11 +33,20 @@ export class DashboardComponent implements OnInit {
       }
       console.log(res);
     });
-
-
-
-
-
+    this.getDataService.getMostPostsUsers( (err, res) => {
+      console.log('Test getMostPostsUsers ->');
+      if (err) {
+        return console.error(err);
+      }
+      console.log(res);
+    });
+    this.getDataService.getMostDiagnosticsUsers( (err, res) => {
+      console.log('Test getMostDiagnosticsUsers ->');
+      if (err) {
+        return console.error(err);
+      }
+      console.log(res);
+    });
 
   }
 

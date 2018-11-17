@@ -9,6 +9,10 @@ export class GetDataService {
   constructor(private afs: AngularFirestore) {
   }
 
+  /**
+   * Get a number of the users average age
+   * @param callback  The first parameter of the callback is the error, the second is the value
+   */
   getAverageAge(callback) {
     this.afs.collection('usersInfos').get().subscribe((users) => {
       let total_age = 0;
@@ -26,7 +30,10 @@ export class GetDataService {
     });
   }
 
-
+  /**
+   * Get an object with 2 attributes, nb_femme & nb_homme, respectively the number of woman and the number of man
+   * @param callback  The first parameter of the callback is the error, the second is the value
+   */
   getAverageGender(callback) {
     this.afs.collection('usersInfos').get().subscribe((users) => {
       let nb_f = 0;
@@ -51,12 +58,17 @@ export class GetDataService {
     });
   }
 
-
+  /**
+   * Get a user by it's id
+   * @param id The id of the user to get
+   * @param callback The first parameter of the callback is the error, the second is the value
+   */
   getUserById(id, callback) {
     if (id) {
       this.afs.collection('usersInfos', ref => {
         let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
-        if (id) { query = query.where('userId', '==', id); }
+        query = query.where('userId', '==', id);
+        query = query.limit(1);
         return query;
       }).valueChanges().subscribe((user) => {
         return callback(null, user);
@@ -68,40 +80,52 @@ export class GetDataService {
     }
   }
 
+  /**
+   * Get a map of the users as the key and the number of diagnostics send as the value
+   * @param callback The first parameter of the callback is the error, the second is the value
+   */
+  getMostDiagnosticsUsers(callback) {
+  this.afs.collection('diagnostics').get().subscribe((users) => {
+    let classement = new Map<string, number>();
 
-  getTopPostsCreator(top, callback) {
-    this.afs.collection('posts').get().subscribe((posts) => {
-      const map = new Map();
-      const array = [];
-      const array_id = new Array(top);
+    for (const entry of users.docs) {
+      classement = this._addUserToMap(entry.get('userId'), classement);
+    }
 
-      for (const entry of posts.docs) {
-        const entry_userId = entry.get('userId');
-        if (map.has(entry_userId)) {
-          let tmp = map.get(entry_userId);
-          tmp++;
-          map.set(entry_userId, tmp);
-        } else {
-          map.set(entry_userId, 1);
-        }
+    callback(null, classement);
+  }, (err) => {
+    callback(err);
+  });
+  }
+
+  /**
+   * Get a map of the users as the key and the number of posts created as the value
+   * @param callback The first parameter of the callback is the error, the second is the value
+   */
+  getMostPostsUsers(callback) {
+    this.afs.collection('posts').get().subscribe((users) => {
+      let classement = new Map<string, number>();
+      for (const entry of users.docs) {
+        classement = this._addUserToMap(entry.get('userId'), classement);
       }
-      map.forEach((v, k) => {
-        array.push(v);
-      });
-      array.sort((n1, n2) => n2 - n1);
-      for (let i = 0; i < top; i++) {
-        map.forEach((v, k) => {
-          if (v == array[i]) {
-            array_id[i] = k;
-          }
-        });
-      }
-      callback(null, {
-        users: array_id
-      });
+      callback(null, classement);
     }, (err) => {
       callback(err);
     });
   }
+
+  /**
+   * Add a key to a map if the key is already there increment it's value by 1
+   * @param value The value to add
+   * @param map The map where the value is added
+   * @return the map with the added value
+   */
+  private _addUserToMap(value: string, map: Map<string, number>): Map<string, number> {
+    if (map.has(value)) {
+      return map.set(value, map.get(value) + 1);
+    }
+    return map.set(value, 1);
+  }
+
 
 }

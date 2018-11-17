@@ -83,6 +83,23 @@ export class GetDataService {
   }
 
   /**
+   * Get a post by it's document id
+   * @param id The id of the post (document) to get
+   * @param callback The first parameter of the callback is the error, the second is the value
+   */
+  getPostById(id: string, callback) {
+    if (id) {
+      this.afs.collection('posts').doc(id).valueChanges().subscribe((post) => {
+        return callback(null, post);
+      }, (err) => {
+        return callback(err);
+      });
+    } else {
+      callback(new Error('no id'));
+    }
+  }
+
+  /**
    * Get a map of the users as the key and the number of diagnostics send as the value
    * @param callback The first parameter of the callback is the error, the second is the value
    */
@@ -118,7 +135,8 @@ export class GetDataService {
 
 
   /**
-   * Get most upvotes
+   * Get upvotes as an object, each attributes represent a 'zones' document's id and each document have attributes
+   * that represent userId and the number of upvotes as their value
    * @param callback callback
    */
   getMostUpvotes(callback) {

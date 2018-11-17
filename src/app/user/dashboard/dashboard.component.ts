@@ -26,8 +26,15 @@ export class DashboardComponent implements OnInit {
       }
       console.log(res);
     });
-    this.getDataService.getUserById('2kHm8ZAJnTh4rkYJjfHW2ALtYlt2', (err, res) => {
+    this.getDataService.getUserById('dhaXX2isz3fbXES0Vl9JszmXGY32', (err, res) => {
       console.log('Test getUserById ->');
+      if (err) {
+        return console.error(err);
+      }
+      console.log(res);
+    });
+    this.getDataService.getPostById('3ERbnaH2XzU8B3JI2si8', (err, res) => {
+      console.log('Test getPostById ->');
       if (err) {
         return console.error(err);
       }

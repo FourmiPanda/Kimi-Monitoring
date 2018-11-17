@@ -1,4 +1,4 @@
-<div class="app-user-panel" style="height: 100vh;">
+<div class="app-user-panel" fxFill>
   <div fxLayout="column">
     <div>
       <mat-toolbar color="primary">
@@ -25,24 +25,22 @@
       <div fxLayout="row" fxFlex="20">
         <div *ngIf='user.provider != "password"'>
           <mat-card class="example-card">
-              <div fxLayout="row" fxLayoutGap="10px">
-                <div><img class="profile-picture" src="{{user.image}}"></div>
-                <div fxLayout="column">
-                  <div>
-                    <mat-card-title>{{user.name}}</mat-card-title>
-                  </div>
-                  <div>
-                    <mat-card-subtitle>Docteur</mat-card-subtitle>
-                  </div>
+            <div fxLayout="row" fxLayoutGap="10px">
+              <div><img class="profile-picture" src="{{user.image}}"></div>
+              <div fxLayout="column">
+                <div>
+                  <mat-card-title>{{user.name}}</mat-card-title>
+                </div>
+                <div>
+                  <mat-card-subtitle>Docteur</mat-card-subtitle>
                 </div>
               </div>
+            </div>
           </mat-card>
         </div>
       </div>
       <div fxLayout="row" fxFlex="80">
-        <div>
-          <app-dashboard></app-dashboard>
-        </div>
+        <app-dashboard></app-dashboard>
       </div>
     </div>
   </div>

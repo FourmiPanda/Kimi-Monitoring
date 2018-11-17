@@ -90,6 +90,7 @@
 						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_get_data_service_.getdataservice.html#afd" class="tsd-kind-icon">afd</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_get_data_service_.getdataservice.html#afs" class="tsd-kind-icon">afs</a></li>
 							</ul>
 						</section>
@@ -101,6 +102,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_get_data_service_.getdataservice.html#getaveragegender" class="tsd-kind-icon">get<wbr>Average<wbr>Gender</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_get_data_service_.getdataservice.html#getmostdiagnosticsusers" class="tsd-kind-icon">get<wbr>Most<wbr>Diagnostics<wbr>Users</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_get_data_service_.getdataservice.html#getmostpostsusers" class="tsd-kind-icon">get<wbr>Most<wbr>Posts<wbr>Users</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_get_data_service_.getdataservice.html#getmostupvotes" class="tsd-kind-icon">get<wbr>Most<wbr>Upvotes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_get_data_service_.getdataservice.html#getpostbyid" class="tsd-kind-icon">get<wbr>Post<wbr>ById</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_get_data_service_.getdataservice.html#getuserbyid" class="tsd-kind-icon">get<wbr>User<wbr>ById</a></li>
 							</ul>
 						</section>
@@ -113,19 +116,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Get<wbr>Data<wbr>Service<span class="tsd-signature-symbol">(</span>afs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AngularFirestore</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_get_data_service_.getdataservice.html" class="tsd-signature-type">GetDataService</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Get<wbr>Data<wbr>Service<span class="tsd-signature-symbol">(</span>afs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AngularFirestore</span>, afd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AngularFireDatabase</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_get_data_service_.getdataservice.html" class="tsd-signature-type">GetDataService</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/d22a80c/src/app/services/get-data.service.ts#L10">get-data.service.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/c35fafd/src/app/services/get-data.service.ts#L11">get-data.service.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>afs: <span class="tsd-signature-type">AngularFirestore</span></h5>
+								</li>
+								<li>
+									<h5>afd: <span class="tsd-signature-type">AngularFireDatabase</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_get_data_service_.getdataservice.html" class="tsd-signature-type">GetDataService</a></h4>
@@ -136,12 +142,22 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="afd" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> afd</h3>
+					<div class="tsd-signature tsd-kind-icon">afd<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AngularFireDatabase</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/c35fafd/src/app/services/get-data.service.ts#L13">get-data.service.ts:13</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="afs" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> afs</h3>
 					<div class="tsd-signature tsd-kind-icon">afs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AngularFirestore</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/d22a80c/src/app/services/get-data.service.ts#L12">get-data.service.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/c35fafd/src/app/services/get-data.service.ts#L13">get-data.service.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -158,7 +174,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/d22a80c/src/app/services/get-data.service.ts#L124">get-data.service.ts:124</a></li>
+									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/c35fafd/src/app/services/get-data.service.ts#L157">get-data.service.ts:157</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -196,7 +212,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/d22a80c/src/app/services/get-data.service.ts#L19">get-data.service.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/c35fafd/src/app/services/get-data.service.ts#L20">get-data.service.ts:20</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -227,7 +243,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/d22a80c/src/app/services/get-data.service.ts#L40">get-data.service.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/c35fafd/src/app/services/get-data.service.ts#L41">get-data.service.ts:41</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -258,7 +274,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/d22a80c/src/app/services/get-data.service.ts#L88">get-data.service.ts:88</a></li>
+									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/c35fafd/src/app/services/get-data.service.ts#L106">get-data.service.ts:106</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -289,7 +305,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/d22a80c/src/app/services/get-data.service.ts#L106">get-data.service.ts:106</a></li>
+									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/c35fafd/src/app/services/get-data.service.ts#L124">get-data.service.ts:124</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -311,6 +327,75 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getmostupvotes" class="tsd-anchor"></a>
+					<h3>get<wbr>Most<wbr>Upvotes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Most<wbr>Upvotes<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/c35fafd/src/app/services/get-data.service.ts#L142">get-data.service.ts:142</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get upvotes as an object, each attributes represent a &#39;zones&#39; document&#39;s id and each document have attributes
+									that represent userId and the number of upvotes as their value</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>callback: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>callback</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getpostbyid" class="tsd-anchor"></a>
+					<h3>get<wbr>Post<wbr>ById</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Post<wbr>ById<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/c35fafd/src/app/services/get-data.service.ts#L90">get-data.service.ts:90</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get a post by it&#39;s document id</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The id of the post (document) to get</p>
+									</div>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The first parameter of the callback is the error, the second is the value</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getuserbyid" class="tsd-anchor"></a>
 					<h3>get<wbr>User<wbr>ById</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -320,7 +405,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/d22a80c/src/app/services/get-data.service.ts#L67">get-data.service.ts:67</a></li>
+									<li>Defined in <a href="https://github.com/FourmiPanda/Kimi-Monitoring/blob/c35fafd/src/app/services/get-data.service.ts#L68">get-data.service.ts:68</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -371,6 +456,9 @@
 								<a href="_get_data_service_.getdataservice.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_get_data_service_.getdataservice.html#afd" class="tsd-kind-icon">afd</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_get_data_service_.getdataservice.html#afs" class="tsd-kind-icon">afs</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
@@ -387,6 +475,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_get_data_service_.getdataservice.html#getmostpostsusers" class="tsd-kind-icon">get<wbr>Most<wbr>Posts<wbr>Users</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_get_data_service_.getdataservice.html#getmostupvotes" class="tsd-kind-icon">get<wbr>Most<wbr>Upvotes</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_get_data_service_.getdataservice.html#getpostbyid" class="tsd-kind-icon">get<wbr>Post<wbr>ById</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_get_data_service_.getdataservice.html#getuserbyid" class="tsd-kind-icon">get<wbr>User<wbr>ById</a>

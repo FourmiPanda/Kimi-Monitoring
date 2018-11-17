@@ -4,6 +4,9 @@ import {AngularFirestore} from '@angular/fire/firestore';
 @Injectable({
   providedIn: 'root'
 })
+/**
+ * Database query services
+ */
 export class GetDataService {
 
   constructor(private afs: AngularFirestore) {
@@ -47,11 +50,9 @@ export class GetDataService {
           nb_f++;
         }
       }
-      const total = nb_f + nb_m;
-
       callback(null, {
-        nb_femme: Math.floor((nb_f / total) * 100),
-        nb_homme: Math.floor((nb_m / total) * 100)
+        nb_femme: nb_f,
+        nb_homme: nb_m
       });
     }, (err) => {
       callback(err);
@@ -63,7 +64,7 @@ export class GetDataService {
    * @param id The id of the user to get
    * @param callback The first parameter of the callback is the error, the second is the value
    */
-  getUserById(id, callback) {
+  getUserById(id: string, callback) {
     if (id) {
       this.afs.collection('usersInfos', ref => {
         let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;

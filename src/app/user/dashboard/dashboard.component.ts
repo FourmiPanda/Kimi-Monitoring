@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
       }
       console.log(res);
     });
-    this.getDataService.getUserById('YZ40aAkesnQdEf5zHwQUOdGbDHJ3', (err, res) => {
+    this.getDataService.getUserById('2kHm8ZAJnTh4rkYJjfHW2ALtYlt2', (err, res) => {
       console.log('Test getUserById ->');
       if (err) {
         return console.error(err);
@@ -42,6 +42,13 @@ export class DashboardComponent implements OnInit {
     });
     this.getDataService.getMostDiagnosticsUsers( (err, res) => {
       console.log('Test getMostDiagnosticsUsers ->');
+      if (err) {
+        return console.error(err);
+      }
+      console.log(res);
+    });
+    this.getDataService.getMostUpvotes( (err, res) => {
+      console.log('Test getMostUpvotes ->');
       if (err) {
         return console.error(err);
       }

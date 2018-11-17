@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
 import {AngularFirestore} from '@angular/fire/firestore';
 
 @Injectable({
@@ -9,7 +10,7 @@ import {AngularFirestore} from '@angular/fire/firestore';
  */
 export class GetDataService {
 
-  constructor(private afs: AngularFirestore) {
+  constructor(private afs: AngularFirestore, private afd: AngularFireDatabase) {
   }
 
   /**
@@ -114,6 +115,20 @@ export class GetDataService {
       callback(err);
     });
   }
+
+
+  /**
+   * Get most upvotes
+   * @param callback callback
+   */
+  getMostUpvotes(callback) {
+    this.afd.object('upvotes').valueChanges().subscribe((res) => {
+      callback(null, res);
+    }, (err) => {
+      callback(err);
+    });
+  }
+
 
   /**
    * Add a key to a map if the key is already there increment it's value by 1

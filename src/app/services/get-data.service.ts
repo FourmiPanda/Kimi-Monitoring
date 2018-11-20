@@ -2,14 +2,20 @@ import {Injectable} from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import {AngularFirestore} from '@angular/fire/firestore';
 
+/**
+ * GetDataService is used for interacting with the database
+ */
 @Injectable({
   providedIn: 'root'
 })
-/**
- * Database query services
- */
+
 export class GetDataService {
 
+  /**
+   * constructor
+   * @param afs AngulareFirestore module used for querying the cloud firestore DB
+   * @param afd AngularFireDatabase module used for querying the Real Time DB
+   */
   constructor(private afs: AngularFirestore, private afd: AngularFireDatabase) {
   }
 
@@ -28,9 +34,9 @@ export class GetDataService {
         nb++;
       }
       value = total_age / nb;
-      callback(null, value);
+      return callback(null, value);
     }, (err) => {
-      callback(err);
+      return callback(err);
     });
   }
 
@@ -98,6 +104,22 @@ export class GetDataService {
       callback(new Error('no id'));
     }
   }
+
+  /*
+  getImages(callback) {
+      this.afs.collection('image').get().subscribe((images) => {
+
+        let array: string[] = [];
+
+        for (const entry of images.docs) {
+          array.push(entry.get("url"));
+        }
+
+        return callback(null, array);
+      }, (err) => {
+        return callback(err);
+      });
+  }*/
 
   /**
    * Get a map of the users as the key and the number of diagnostics send as the value

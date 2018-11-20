@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {GetDataService} from '../../services/get-data.service';
 
 @Component({
@@ -8,7 +8,10 @@ import {GetDataService} from '../../services/get-data.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private getDataService: GetDataService) { }
+  constructor(private getDataService: GetDataService) {
+  }
+
+  images: string[];
 
   ngOnInit() {
     console.log('Tests :');
@@ -40,21 +43,21 @@ export class DashboardComponent implements OnInit {
       }
       console.log(res);
     });
-    this.getDataService.getMostPostsUsers( (err, res) => {
+    this.getDataService.getMostPostsUsers((err, res) => {
       console.log('Test getMostPostsUsers ->');
       if (err) {
         return console.error(err);
       }
       console.log(res);
     });
-    this.getDataService.getMostDiagnosticsUsers( (err, res) => {
+    this.getDataService.getMostDiagnosticsUsers((err, res) => {
       console.log('Test getMostDiagnosticsUsers ->');
       if (err) {
         return console.error(err);
       }
       console.log(res);
     });
-    this.getDataService.getMostUpvotes( (err, res) => {
+    this.getDataService.getMostUpvotes((err, res) => {
       console.log('Test getMostUpvotes ->');
       if (err) {
         return console.error(err);
@@ -62,6 +65,12 @@ export class DashboardComponent implements OnInit {
       console.log(res);
     });
 
+    this.getDataService.getImages((err,res) => {
+      if (err) {
+        return console.error(err);
+      }
+      this.images = res;
+    });
   }
 
 }

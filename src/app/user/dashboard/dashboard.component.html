@@ -1,1 +1,7 @@
-Main
+<h3>Galeries</h3>
+<div fxLayout="row wrap">
+  <div *ngFor="let image of this.images">
+    <img style="width: 100px; height: 100px;" [src]="image">
+  </div>
+</div>
+

@@ -3,6 +3,9 @@ export class FirebaseUserModel {
   name: string;
   provider: string;
 
+  /**
+   * Create a user model
+   */
   constructor() {
     this.image = '';
     this.name = '';

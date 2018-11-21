@@ -242,7 +242,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/user/dashboard/dashboard.component.ts:27</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/user/dashboard/dashboard.component.ts:28</a></div>
                             </td>
                         </tr>
 
@@ -326,6 +326,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this._test();
   }
 
   /**
@@ -382,6 +383,34 @@ export class DashboardComponent implements OnInit {
       }
       console.log(res);
     });
+    this.getDataService.getZoneByDocId(&#x27;5E6lc4iv7Z1LSQuA6O0u&#x27;, (err, res) &#x3D;&gt; {
+      console.log(&#x27;Test getZoneByDocId -&gt;&#x27;);
+      if (err) {
+        return console.error(err);
+      }
+      console.log(res);
+    });
+    this.getDataService.getResponseOfADiag(&#x27;Et52rT5p5eUC2xidvYoV&#x27;, (err, res) &#x3D;&gt; {
+      console.log(&#x27;Test getResponseOfADiag -&gt;&#x27;);
+      if (err) {
+        return console.error(err);
+      }
+      console.log(res);
+    });
+    this.getDataService.getDiagnosticsOfAZone(&#x27;5E6lc4iv7Z1LSQuA6O0u&#x27;, (err, res) &#x3D;&gt; {
+      console.log(&#x27;Test getDiagnosticsOfAZone -&gt;&#x27;);
+      if (err) {
+        return console.error(err);
+      }
+      console.log(res);
+    }, +new Date(&#x27;December 17, 2018 03:24:00&#x27;), Date.now());
+    this.getDataService.getPostsOfAUser(&#x27;dhaXX2isz3fbXES0Vl9JszmXGY32&#x27;, (err, res) &#x3D;&gt; {
+      console.log(&#x27;Test getPostsOfAUser -&gt;&#x27;);
+      if (err) {
+        return console.error(err);
+      }
+      console.log(res);
+    }, Date.now());
   }
 
 }

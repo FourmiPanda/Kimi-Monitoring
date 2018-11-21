@@ -99,6 +99,10 @@ can change over time.</p>
                                     <span class="modifier">Private</span>
                                 <a href="#col_usersInfo">col_usersInfo</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#col_zones">col_zones</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -122,6 +126,9 @@ can change over time.</p>
                                 <a href="#getAverageGender">getAverageGender</a>
                             </li>
                             <li>
+                                <a href="#getDiagnosticsOfAZone">getDiagnosticsOfAZone</a>
+                            </li>
+                            <li>
                                 <a href="#getMostDiagnosticsUsers">getMostDiagnosticsUsers</a>
                             </li>
                             <li>
@@ -134,7 +141,16 @@ can change over time.</p>
                                 <a href="#getPostById">getPostById</a>
                             </li>
                             <li>
+                                <a href="#getPostsOfAUser">getPostsOfAUser</a>
+                            </li>
+                            <li>
+                                <a href="#getResponseOfADiag">getResponseOfADiag</a>
+                            </li>
+                            <li>
                                 <a href="#getUserById">getUserById</a>
+                            </li>
+                            <li>
+                                <a href="#getZoneByDocId">getZoneByDocId</a>
                             </li>
                         </ul>
                     </td>
@@ -159,7 +175,7 @@ can change over time.</p>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/services/get-data.service.ts:35</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/services/get-data.service.ts:40</a></div>
                             </td>
                         </tr>
 
@@ -249,7 +265,7 @@ can change over time.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="204" class="link-to-prism">src/app/services/get-data.service.ts:204</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="312" class="link-to-prism">src/app/services/get-data.service.ts:312</a></div>
                             </td>
                         </tr>
 
@@ -342,7 +358,7 @@ can change over time.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/services/get-data.service.ts:49</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/services/get-data.service.ts:54</a></div>
                             </td>
                         </tr>
 
@@ -414,7 +430,7 @@ can change over time.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/services/get-data.service.ts:73</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app/services/get-data.service.ts:78</a></div>
                             </td>
                         </tr>
 
@@ -468,6 +484,127 @@ can change over time.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="getDiagnosticsOfAZone"></a>
+                        <span class="name">
+                            <b>
+                            getDiagnosticsOfAZone
+                            </b>
+                            <a href="#getDiagnosticsOfAZone"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getDiagnosticsOfAZone(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, callback, start_date?, end_date?)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="244" class="link-to-prism">src/app/services/get-data.service.ts:244</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Get an array of the diagnostic of a given zone</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>id</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The id of the user</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>callback</td>
+                                                        <td>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The first parameter of the callback is the error, the second is the value</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>start_date</td>
+                                                        <td>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Optional : select only the post created since this parameter</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>end_date</td>
+                                                        <td>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Optional : select only the post created before this parameter</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="getMostDiagnosticsUsers"></a>
                         <span class="name">
                             <b>
@@ -486,7 +623,7 @@ can change over time.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="144" class="link-to-prism">src/app/services/get-data.service.ts:144</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="169" class="link-to-prism">src/app/services/get-data.service.ts:169</a></div>
                             </td>
                         </tr>
 
@@ -558,7 +695,7 @@ can change over time.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="165" class="link-to-prism">src/app/services/get-data.service.ts:165</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="190" class="link-to-prism">src/app/services/get-data.service.ts:190</a></div>
                             </td>
                         </tr>
 
@@ -630,7 +767,7 @@ can change over time.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="186" class="link-to-prism">src/app/services/get-data.service.ts:186</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="294" class="link-to-prism">src/app/services/get-data.service.ts:294</a></div>
                             </td>
                         </tr>
 
@@ -703,7 +840,7 @@ that represent userId and the number of upvotes as their value</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">src/app/services/get-data.service.ts:125</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="150" class="link-to-prism">src/app/services/get-data.service.ts:150</a></div>
                             </td>
                         </tr>
 
@@ -776,6 +913,218 @@ that represent userId and the number of upvotes as their value</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="getPostsOfAUser"></a>
+                        <span class="name">
+                            <b>
+                            getPostsOfAUser
+                            </b>
+                            <a href="#getPostsOfAUser"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getPostsOfAUser(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, callback, start_date?, end_date?)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="213" class="link-to-prism">src/app/services/get-data.service.ts:213</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Get an array of the post created by the given user</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>id</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The id of the user</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>callback</td>
+                                                        <td>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The first parameter of the callback is the error, the second is the value</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>start_date</td>
+                                                        <td>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Optional : select only the post created since this parameter</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>end_date</td>
+                                                        <td>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Optional : select only the post created before this parameter</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getResponseOfADiag"></a>
+                        <span class="name">
+                            <b>
+                            getResponseOfADiag
+                            </b>
+                            <a href="#getResponseOfADiag"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getResponseOfADiag(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, callback)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="273" class="link-to-prism">src/app/services/get-data.service.ts:273</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Get an array of the response of a given diagnostic</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>id</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The id of the user</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>callback</td>
+                                                        <td>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The first parameter of the callback is the error, the second is the value</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="getUserById"></a>
                         <span class="name">
                             <b>
@@ -794,7 +1143,7 @@ that represent userId and the number of upvotes as their value</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">src/app/services/get-data.service.ts:103</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="108" class="link-to-prism">src/app/services/get-data.service.ts:108</a></div>
                             </td>
                         </tr>
 
@@ -829,6 +1178,97 @@ that represent userId and the number of upvotes as their value</p>
 
                                                         <td>
                                                                 <code><p>The id of the user to get</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>callback</td>
+                                                        <td>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The first parameter of the callback is the error, the second is the value</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getZoneByDocId"></a>
+                        <span class="name">
+                            <b>
+                            getZoneByDocId
+                            </b>
+                            <a href="#getZoneByDocId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getZoneByDocId(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, callback)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="130" class="link-to-prism">src/app/services/get-data.service.ts:130</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Get a zone by it&#39;s doc id</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>id</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>The id of the document</p>
 </code>
                                                         </td>
                                                 </tr>
@@ -903,7 +1343,7 @@ that represent userId and the number of upvotes as their value</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/services/get-data.service.ts:30</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/services/get-data.service.ts:35</a></div>
                             </td>
                         </tr>
 
@@ -995,13 +1435,13 @@ that represent userId and the number of upvotes as their value</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/services/get-data.service.ts:35</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/services/get-data.service.ts:40</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>The &#39;upvotes&#39; collection</p>
+                        <div class="io-description"><p>The &#39;upvote&#39; collection</p>
 </div>
                     </td>
                 </tr>
@@ -1054,6 +1494,52 @@ that represent userId and the number of upvotes as their value</p>
 
             </tbody>
         </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="col_zones"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            col_zones
+                            </b>
+                            <a href="#col_zones"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>col_zones:     <code>null</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>null</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/services/get-data.service.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The &#39;zones&#39; collection</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
 </section>
 
     </div>
@@ -1087,12 +1573,17 @@ export class GetDataService {
   private col_posts &#x3D; null;
 
   /**
+   * The &#x27;zones&#x27; collection
+   */
+  private col_zones &#x3D; null;
+
+  /**
    * The &#x27;diagnostics&#x27; collection
    */
   private col_diagnostics &#x3D; null;
 
   /**
-   * The &#x27;upvotes&#x27; collection
+   * The &#x27;upvote&#x27; collection
    */
   private col_upvotes &#x3D; null;
 
@@ -1180,6 +1671,26 @@ export class GetDataService {
   }
 
   /**
+   * Get a zone by it&#x27;s doc id
+   * @param id The id of the document
+   * @param callback The first parameter of the callback is the error, the second is the value
+   */
+  getZoneByDocId(id: string, callback) {
+    if (id) {
+      if (this.col_zones &#x3D;&#x3D; null) {
+        this.col_zones &#x3D; this.afs.collection(&#x27;zones&#x27;);
+      }
+      this.col_zones.doc(id).valueChanges().subscribe((post) &#x3D;&gt; {
+        return callback(null, post);
+      }, (err) &#x3D;&gt; {
+        return callback(err);
+      });
+    } else {
+      callback(new Error(&#x27;no id&#x27;));
+    }
+  }
+
+  /**
    * Get a post by it&#x27;s document id
    * @param id The id of the post (document) to get
    * @param callback The first parameter of the callback is the error, the second is the value
@@ -1239,6 +1750,89 @@ export class GetDataService {
     });
   }
 
+
+  /**
+   * Get an array of the post created by the given user
+   * @param id The id of the user
+   * @param callback The first parameter of the callback is the error, the second is the value
+   * @param start_date Optional : select only the post created since this parameter
+   * @param end_date Optional : select only the post created before this parameter
+   */
+  getPostsOfAUser(id: string, callback, start_date?, end_date?) {
+    if (id) {
+      this.afs.collection(&#x27;posts&#x27;, ref &#x3D;&gt; {
+        let query: firebase.firestore.CollectionReference | firebase.firestore.Query &#x3D; ref;
+        query &#x3D; query.where(&#x27;userId&#x27;, &#x27;&#x3D;&#x3D;&#x27;, id);
+        query &#x3D; query.orderBy(&#x27;published&#x27;, &#x27;desc&#x27;);
+        // FIXME: Bug with date
+        if (start_date) {
+          query &#x3D; query.startAt(start_date);
+        }
+        if (end_date) {
+          query &#x3D; query.endAt(end_date);
+        }
+        return query;
+      }).valueChanges().subscribe((user) &#x3D;&gt; {
+        return callback(null, user);
+      }, (err) &#x3D;&gt; {
+        return callback(err);
+      });
+    } else {
+      callback(new Error(&#x27;no id&#x27;));
+    }
+  }
+
+  /**
+   * Get an array of the diagnostic of a given zone
+   * @param id The id of the user
+   * @param callback The first parameter of the callback is the error, the second is the value
+   * @param start_date Optional : select only the post created since this parameter
+   * @param end_date Optional : select only the post created before this parameter
+   */
+  getDiagnosticsOfAZone(id: string, callback, start_date?, end_date?) {
+    if (id) {
+      this.afs.collection(&#x27;diagnostics&#x27;, ref &#x3D;&gt; {
+        let query: firebase.firestore.CollectionReference | firebase.firestore.Query &#x3D; ref;
+        query &#x3D; query.where(&#x27;zoneId&#x27;, &#x27;&#x3D;&#x3D;&#x27;, id);
+        query &#x3D; query.orderBy(&#x27;published&#x27;);
+        // FIXME: Bug with date
+        if (start_date) {
+          query &#x3D; query.startAt(start_date);
+        }
+        if (end_date) {
+          query &#x3D; query.endAt(end_date);
+        }
+        return query;
+      }).valueChanges().subscribe((user) &#x3D;&gt; {
+        return callback(null, user);
+      }, (err) &#x3D;&gt; {
+        return callback(err);
+      });
+    } else {
+      callback(new Error(&#x27;no id&#x27;));
+    }
+  }
+
+  /**
+   * Get an array of the response of a given diagnostic
+   * @param id The id of the user
+   * @param callback The first parameter of the callback is the error, the second is the value
+   */
+  getResponseOfADiag(id: string, callback) {
+    if (id) {
+      this.afs.collection(&#x27;responses&#x27;, ref &#x3D;&gt; {
+        let query: firebase.firestore.CollectionReference | firebase.firestore.Query &#x3D; ref;
+        query &#x3D; query.where(&#x27;diagId&#x27;, &#x27;&#x3D;&#x3D;&#x27;, id);
+        return query;
+      }).valueChanges().subscribe((user) &#x3D;&gt; {
+        return callback(null, user);
+      }, (err) &#x3D;&gt; {
+        return callback(err);
+      });
+    } else {
+      callback(new Error(&#x27;no id&#x27;));
+    }
+  }
 
   /**
    * Get upvotes as an object, each attributes represent a &#x27;zones&#x27; document&#x27;s id and each document have attributes

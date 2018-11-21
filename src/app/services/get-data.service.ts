@@ -25,12 +25,17 @@ export class GetDataService {
   private col_posts = null;
 
   /**
+   * The 'zones' collection
+   */
+  private col_zones = null;
+
+  /**
    * The 'diagnostics' collection
    */
   private col_diagnostics = null;
 
   /**
-   * The 'upvotes' collection
+   * The 'upvote' collection
    */
   private col_upvotes = null;
 
@@ -118,6 +123,26 @@ export class GetDataService {
   }
 
   /**
+   * Get a zone by it's doc id
+   * @param id The id of the document
+   * @param callback The first parameter of the callback is the error, the second is the value
+   */
+  getZoneByDocId(id: string, callback) {
+    if (id) {
+      if (this.col_zones == null) {
+        this.col_zones = this.afs.collection('zones');
+      }
+      this.col_zones.doc(id).valueChanges().subscribe((post) => {
+        return callback(null, post);
+      }, (err) => {
+        return callback(err);
+      });
+    } else {
+      callback(new Error('no id'));
+    }
+  }
+
+  /**
    * Get a post by it's document id
    * @param id The id of the post (document) to get
    * @param callback The first parameter of the callback is the error, the second is the value
@@ -177,6 +202,89 @@ export class GetDataService {
     });
   }
 
+
+  /**
+   * Get an array of the post created by the given user
+   * @param id The id of the user
+   * @param callback The first parameter of the callback is the error, the second is the value
+   * @param start_date Optional : select only the post created since this parameter
+   * @param end_date Optional : select only the post created before this parameter
+   */
+  getPostsOfAUser(id: string, callback, start_date?, end_date?) {
+    if (id) {
+      this.afs.collection('posts', ref => {
+        let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
+        query = query.where('userId', '==', id);
+        query = query.orderBy('published', 'desc');
+        // FIXME: Bug with date
+        if (start_date) {
+          query = query.startAt(start_date);
+        }
+        if (end_date) {
+          query = query.endAt(end_date);
+        }
+        return query;
+      }).valueChanges().subscribe((user) => {
+        return callback(null, user);
+      }, (err) => {
+        return callback(err);
+      });
+    } else {
+      callback(new Error('no id'));
+    }
+  }
+
+  /**
+   * Get an array of the diagnostic of a given zone
+   * @param id The id of the user
+   * @param callback The first parameter of the callback is the error, the second is the value
+   * @param start_date Optional : select only the post created since this parameter
+   * @param end_date Optional : select only the post created before this parameter
+   */
+  getDiagnosticsOfAZone(id: string, callback, start_date?, end_date?) {
+    if (id) {
+      this.afs.collection('diagnostics', ref => {
+        let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
+        query = query.where('zoneId', '==', id);
+        query = query.orderBy('published');
+        // FIXME: Bug with date
+        if (start_date) {
+          query = query.startAt(start_date);
+        }
+        if (end_date) {
+          query = query.endAt(end_date);
+        }
+        return query;
+      }).valueChanges().subscribe((user) => {
+        return callback(null, user);
+      }, (err) => {
+        return callback(err);
+      });
+    } else {
+      callback(new Error('no id'));
+    }
+  }
+
+  /**
+   * Get an array of the response of a given diagnostic
+   * @param id The id of the user
+   * @param callback The first parameter of the callback is the error, the second is the value
+   */
+  getResponseOfADiag(id: string, callback) {
+    if (id) {
+      this.afs.collection('responses', ref => {
+        let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
+        query = query.where('diagId', '==', id);
+        return query;
+      }).valueChanges().subscribe((user) => {
+        return callback(null, user);
+      }, (err) => {
+        return callback(err);
+      });
+    } else {
+      callback(new Error('no id'));
+    }
+  }
 
   /**
    * Get upvotes as an object, each attributes represent a 'zones' document's id and each document have attributes

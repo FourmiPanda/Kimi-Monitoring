@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this._test();
   }
 
   /**
@@ -75,6 +76,34 @@ export class DashboardComponent implements OnInit {
       }
       console.log(res);
     });
+    this.getDataService.getZoneByDocId('5E6lc4iv7Z1LSQuA6O0u', (err, res) => {
+      console.log('Test getZoneByDocId ->');
+      if (err) {
+        return console.error(err);
+      }
+      console.log(res);
+    });
+    this.getDataService.getResponseOfADiag('Et52rT5p5eUC2xidvYoV', (err, res) => {
+      console.log('Test getResponseOfADiag ->');
+      if (err) {
+        return console.error(err);
+      }
+      console.log(res);
+    });
+    this.getDataService.getDiagnosticsOfAZone('5E6lc4iv7Z1LSQuA6O0u', (err, res) => {
+      console.log('Test getDiagnosticsOfAZone ->');
+      if (err) {
+        return console.error(err);
+      }
+      console.log(res);
+    }, +new Date('December 17, 2018 03:24:00'), Date.now());
+    this.getDataService.getPostsOfAUser('dhaXX2isz3fbXES0Vl9JszmXGY32', (err, res) => {
+      console.log('Test getPostsOfAUser ->');
+      if (err) {
+        return console.error(err);
+      }
+      console.log(res);
+    }, Date.now());
   }
 
 }

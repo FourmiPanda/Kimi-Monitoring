@@ -105,20 +105,20 @@ export class GetDataService {
     }
   }
 
-  getImages(callback) {
-    this.afs.collection('image').get().subscribe((images) => {
-
-      let array: string[] = [];
-
-      for (const entry of images.docs) {
-        array.push(entry.get("url"));
-      }
-
-      return callback(null, array);
-    }, (err) => {
-      return callback(err);
-    });
-  }
+  // getImages(callback) {
+  //   this.afs.collection('image').get().subscribe((images) => {
+  //
+  //     let array: string[] = [];
+  //
+  //     for (const entry of images.docs) {
+  //       array.push(entry.get("url"));
+  //     }
+  //
+  //     return callback(null, array);
+  //   }, (err) => {
+  //     return callback(err);
+  //   });
+  // }
 
   /**
    * Get a map of the users as the key and the number of diagnostics send as the value

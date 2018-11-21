@@ -8,12 +8,14 @@ import {GetDataService} from '../../services/get-data.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private getDataService: GetDataService) {
-  }
-
-  images: string[];
+    constructor(private getDataService: GetDataService) {
+    }
 
   ngOnInit() {
+    this.test();
+  }
+
+  test(){
     console.log('Tests :');
     this.getDataService.getAverageAge((err, res) => {
       console.log('Test getDataService ->');
@@ -63,13 +65,6 @@ export class DashboardComponent implements OnInit {
         return console.error(err);
       }
       console.log(res);
-    });
-
-    this.getDataService.getImages((err, res) => {
-      if (err) {
-        return console.error(err);
-      }
-      this.images = res;
     });
   }
 

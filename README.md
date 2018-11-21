@@ -41,11 +41,11 @@ export class DashboardComponent {
   //Add an attribute (getDataService) to your component
   constructor(private getDataService: GetDataService) {}
   
-    someFunction(){
-      //Call a getDataService method
-      this.getDataService.someMethod();
-    }
-    }
+  someFunction(){
+    //Call a getDataService method
+    this.getDataService.someMethod();
+  }
+}
 ```
 
 **More Example** : The DashBoardComponent and the UserComponent are example on how to use the different services.

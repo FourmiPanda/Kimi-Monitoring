@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
+import {AngularFireDatabase} from '@angular/fire/database';
 import {AngularFirestore} from '@angular/fire/firestore';
 
 /**
@@ -105,38 +105,37 @@ export class GetDataService {
     }
   }
 
-  /*
   getImages(callback) {
-      this.afs.collection('image').get().subscribe((images) => {
+    this.afs.collection('image').get().subscribe((images) => {
 
-        let array: string[] = [];
+      let array: string[] = [];
 
-        for (const entry of images.docs) {
-          array.push(entry.get("url"));
-        }
+      for (const entry of images.docs) {
+        array.push(entry.get("url"));
+      }
 
-        return callback(null, array);
-      }, (err) => {
-        return callback(err);
-      });
-  }*/
+      return callback(null, array);
+    }, (err) => {
+      return callback(err);
+    });
+  }
 
   /**
    * Get a map of the users as the key and the number of diagnostics send as the value
    * @param callback The first parameter of the callback is the error, the second is the value
    */
   getMostDiagnosticsUsers(callback) {
-  this.afs.collection('diagnostics').get().subscribe((users) => {
-    let classement = new Map<string, number>();
+    this.afs.collection('diagnostics').get().subscribe((users) => {
+      let classement = new Map<string, number>();
 
-    for (const entry of users.docs) {
-      classement = this._addUserToMap(entry.get('userId'), classement);
-    }
+      for (const entry of users.docs) {
+        classement = this._addUserToMap(entry.get('userId'), classement);
+      }
 
-    callback(null, classement);
-  }, (err) => {
-    callback(err);
-  });
+      callback(null, classement);
+    }, (err) => {
+      callback(err);
+    });
   }
 
   /**

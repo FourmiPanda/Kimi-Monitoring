@@ -65,7 +65,7 @@ export class DashboardComponent implements OnInit {
       console.log(res);
     });
 
-    this.getDataService.getImages((err,res) => {
+    this.getDataService.getImages((err, res) => {
       if (err) {
         return console.error(err);
       }

@@ -23,9 +23,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 In order to use the service you have to ___authenticate yourself___.
 You can use your Google, Facebook or Twitter account to do so.
 
-#Developer Guide
+# Developer Guide
 
-##Getting started
+## Getting started
 
 Create a component in the src/app/ folder.
 The GetDataService is provided in root. In order to
@@ -33,7 +33,7 @@ use it, just add an attribute with the type GetDataService to your component's c
 
 To use the service call a method on the getDataService attribute.
 
-###Example:
+### Example:
 ```typescript
 import {GetDataService} from '../../services/get-data.service';
 

@@ -14,7 +14,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - **Modular** - Just add the service you want to use.
 
 
-#### Quick links
+###Quick links
 
 **About angularFire2** - Get information about [angularFire2](https://github.com/angular/angularfire2)
 

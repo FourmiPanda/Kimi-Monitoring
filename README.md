@@ -21,7 +21,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Useful information
 
 In order to use the service you have to ___authenticate yourself___.
-You can use your Google, Facebook or Twitter account to do so.
+I've implemented a basic authentication system.
+You can use your **Google**, **Facebook** or **Twitter** account to do so.
 
 # Developer Guide
 

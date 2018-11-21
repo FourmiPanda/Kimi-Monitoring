@@ -32,6 +32,9 @@ Create a component in the src/app/ folder.
 The GetDataService is provided in root. In order to
 use it, just add an attribute with the type GetDataService to your component's constructor.
 
+To configure this application for your Firebase database. You can
+modify the `Kimi-Monitoring\src\environments\environment.ts` file.
+
 To use the service call a method on the getDataService attribute.
 
 ### Example:

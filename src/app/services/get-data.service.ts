@@ -4,6 +4,9 @@ import {AngularFirestore} from '@angular/fire/firestore';
 
 /**
  * GetDataService is used for interacting with the database
+ * The different method use the angularfire2 api, that's why every
+ * element you get are Observable. It means that the value of the element
+ * can change over time.
  */
 @Injectable({
   providedIn: 'root'

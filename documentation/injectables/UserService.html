@@ -59,6 +59,13 @@
             <code>src/app/core/user.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Service use to get a user from the database</p>
+
+            </p>
 
 
             <section>
@@ -115,12 +122,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/app/core/user.service.ts:7</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/core/user.service.ts:9</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Get the current user</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -129,6 +138,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -143,6 +153,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>AngulareFirestore module used for querying the cloud firestore DB</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -180,18 +194,26 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/core/user.service.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/core/user.service.ts:22</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Get the current user</p>
+</div>
 
+                            <div>
+                            </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                             </div>
+                                <div class="io-description">
+                                    <p>a promise if the user is authenticated the promise is resolved else it&#39;s rejected</p>
+
+                                </div>
                     </td>
                 </tr>
             </tbody>
@@ -231,10 +253,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/core/user.service.ts:9</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/core/user.service.ts:15</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description">AngulareFirestore module used for querying the cloud firestore DB</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -246,16 +273,25 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Injectable} from &#x27;@angular/core&#x27;;
 import {AngularFirestore} from &#x27;angularfire2/firestore&#x27;;
-import {AngularFireAuth} from &#x27;angularfire2/auth&#x27;;
 import * as firebase from &#x27;firebase/app&#x27;;
 
+/**
+ * Service use to get a user from the database
+ */
 @Injectable()
 export class UserService {
 
+  /**
+   * Get the current user
+   * @param db AngulareFirestore module used for querying the cloud firestore DB
+   */
   constructor(public db: AngularFirestore) {
   }
 
-
+  /**
+   * Get the current user
+   * @return a promise if the user is authenticated the promise is resolved else it&#x27;s rejected
+   */
   getCurrentUser() {
     return new Promise&lt;any&gt;((resolve, reject) &#x3D;&gt; {
       var user &#x3D; firebase.auth().onAuthStateChanged(function (user) {

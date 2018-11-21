@@ -59,6 +59,13 @@
             <code>src/app/core/auth.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Service use to authenticate a user to Firebase</p>
+
+            </p>
 
 
             <section>
@@ -96,9 +103,6 @@
                                 <a href="#doGoogleLogin">doGoogleLogin</a>
                             </li>
                             <li>
-                                <a href="#doLogin">doLogin</a>
-                            </li>
-                            <li>
                                 <a href="#doLogout">doLogout</a>
                             </li>
                             <li>
@@ -127,12 +131,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/app/core/auth.service.ts:6</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/core/auth.service.ts:9</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>constructor</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -141,6 +147,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -155,6 +162,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>The authentication module</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -192,18 +203,26 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/core/auth.service.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/core/auth.service.ts:22</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Try to authenticate the user with a Facebook account</p>
+</div>
 
+                            <div>
+                            </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                             </div>
+                                <div class="io-description">
+                                    <p>a promise if the user successfully authenticated it&#39;s resolved, if not it&#39;s rejected</p>
+
+                                </div>
                     </td>
                 </tr>
             </tbody>
@@ -230,74 +249,16 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/core/auth.service.ts:39</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/core/auth.service.ts:59</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Try to authenticate the user with a Google account</p>
+</div>
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="doLogin"></a>
-                        <span class="name">
-                            <b>
-                            doLogin
-                            </b>
-                            <a href="#doLogin"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>doLogin(value)</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/core/auth.service.ts:56</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>value</td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
                             <div>
                             </div>
                             <div class="io-description">
@@ -305,7 +266,8 @@
 
                             </div>
                                 <div class="io-description">
-                                    
+                                    <p>a promise if the user successfully authenticated it&#39;s resolved, if not it&#39;s rejected</p>
+
                                 </div>
                     </td>
                 </tr>
@@ -333,18 +295,26 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/core/auth.service.ts:65</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/app/core/auth.service.ts:79</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Try to log out the user</p>
+</div>
 
+                            <div>
+                            </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                             </div>
+                                <div class="io-description">
+                                    <p>a promise if the user successfully logged out it&#39;s resolved, if not it&#39;s rejected</p>
+
+                                </div>
                     </td>
                 </tr>
             </tbody>
@@ -371,18 +341,26 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/core/auth.service.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/core/auth.service.ts:40</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Try to authenticate the user with a Twitter account</p>
+</div>
 
+                            <div>
+                            </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                             </div>
+                                <div class="io-description">
+                                    <p>a promise if the user successfully authenticated it&#39;s resolved, if not it&#39;s rejected</p>
+
+                                </div>
                     </td>
                 </tr>
             </tbody>
@@ -422,10 +400,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/core/auth.service.ts:8</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/core/auth.service.ts:15</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description">The authentication module</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -439,15 +422,26 @@
 import {AngularFireAuth} from &#x27;angularfire2/auth&#x27;;
 import * as firebase from &#x27;firebase/app&#x27;;
 
+/**
+ * Service use to authenticate a user to Firebase
+ */
 @Injectable()
 export class AuthService {
 
+  /**
+   * constructor
+   * @param afAuth The authentication module
+   */
   constructor(public afAuth: AngularFireAuth) {
   }
 
+  /**
+   * Try to authenticate the user with a Facebook account
+   * @return a promise if the user successfully authenticated it&#x27;s resolved, if not it&#x27;s rejected
+   */
   doFacebookLogin() {
     return new Promise&lt;any&gt;((resolve, reject) &#x3D;&gt; {
-      let provider &#x3D; new firebase.auth.FacebookAuthProvider();
+      const provider &#x3D; new firebase.auth.FacebookAuthProvider();
       this.afAuth.auth
         .signInWithPopup(provider)
         .then(res &#x3D;&gt; {
@@ -459,9 +453,13 @@ export class AuthService {
     });
   }
 
+  /**
+   * Try to authenticate the user with a Twitter account
+   * @return a promise if the user successfully authenticated it&#x27;s resolved, if not it&#x27;s rejected
+   */
   doTwitterLogin() {
     return new Promise&lt;any&gt;((resolve, reject) &#x3D;&gt; {
-      let provider &#x3D; new firebase.auth.TwitterAuthProvider();
+      const provider &#x3D; new firebase.auth.TwitterAuthProvider();
       this.afAuth.auth
         .signInWithPopup(provider)
         .then(res &#x3D;&gt; {
@@ -473,9 +471,14 @@ export class AuthService {
     });
   }
 
+
+  /**
+   * Try to authenticate the user with a Google account
+   * @return a promise if the user successfully authenticated it&#x27;s resolved, if not it&#x27;s rejected
+   */
   doGoogleLogin() {
     return new Promise&lt;any&gt;((resolve, reject) &#x3D;&gt; {
-      let provider &#x3D; new firebase.auth.GoogleAuthProvider();
+      const provider &#x3D; new firebase.auth.GoogleAuthProvider();
       provider.addScope(&#x27;profile&#x27;);
       provider.addScope(&#x27;email&#x27;);
       this.afAuth.auth
@@ -489,23 +492,16 @@ export class AuthService {
     });
   }
 
-
-  doLogin(value) {
-    return new Promise&lt;any&gt;((resolve, reject) &#x3D;&gt; {
-      firebase.auth().signInWithEmailAndPassword(value.email, value.password)
-        .then(res &#x3D;&gt; {
-          resolve(res);
-        }, err &#x3D;&gt; reject(err));
-    });
-  }
-
+  /**
+   * Try to log out the user
+   * @return a promise if the user successfully logged out it&#x27;s resolved, if not it&#x27;s rejected
+   */
   doLogout() {
     return new Promise((resolve, reject) &#x3D;&gt; {
       if (firebase.auth().currentUser) {
         this.afAuth.auth.signOut();
         resolve();
-      }
-      else {
+      } else {
         reject();
       }
     });

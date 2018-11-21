@@ -15,6 +15,26 @@ import {AngularFirestore} from '@angular/fire/firestore';
 export class GetDataService {
 
   /**
+   * The 'usersInfo' collection
+   */
+  private col_usersInfo = null;
+
+  /**
+   * The 'posts' collection
+   */
+  private col_posts = null;
+
+  /**
+   * The 'diagnostics' collection
+   */
+  private col_diagnostics = null;
+
+  /**
+   * The 'upvotes' collection
+   */
+  private col_upvotes = null;
+
+  /**
    * constructor
    * @param afs AngulareFirestore module used for querying the cloud firestore DB
    * @param afd AngularFireDatabase module used for querying the Real Time DB
@@ -27,7 +47,10 @@ export class GetDataService {
    * @param callback  The first parameter of the callback is the error, the second is the value
    */
   getAverageAge(callback) {
-    this.afs.collection('usersInfos').get().subscribe((users) => {
+    if (this.col_usersInfo == null) {
+      this.col_usersInfo = this.afs.collection('usersInfos');
+    }
+    this.col_usersInfo.get().subscribe((users) => {
       let total_age = 0;
       let nb = 0;
       let value;
@@ -48,7 +71,10 @@ export class GetDataService {
    * @param callback  The first parameter of the callback is the error, the second is the value
    */
   getAverageGender(callback) {
-    this.afs.collection('usersInfos').get().subscribe((users) => {
+    if (this.col_usersInfo == null) {
+      this.col_usersInfo = this.afs.collection('usersInfos');
+    }
+    this.col_usersInfo.get().subscribe((users) => {
       let nb_f = 0;
       let nb_m = 0;
       for (const entry of users.docs) {
@@ -98,7 +124,10 @@ export class GetDataService {
    */
   getPostById(id: string, callback) {
     if (id) {
-      this.afs.collection('posts').doc(id).valueChanges().subscribe((post) => {
+      if (this.col_posts == null) {
+        this.col_posts = this.afs.collection('posts');
+      }
+      this.col_posts.doc(id).valueChanges().subscribe((post) => {
         return callback(null, post);
       }, (err) => {
         return callback(err);
@@ -108,27 +137,15 @@ export class GetDataService {
     }
   }
 
-  // getImages(callback) {
-  //   this.afs.collection('image').get().subscribe((images) => {
-  //
-  //     let array: string[] = [];
-  //
-  //     for (const entry of images.docs) {
-  //       array.push(entry.get("url"));
-  //     }
-  //
-  //     return callback(null, array);
-  //   }, (err) => {
-  //     return callback(err);
-  //   });
-  // }
-
   /**
    * Get a map of the users as the key and the number of diagnostics send as the value
    * @param callback The first parameter of the callback is the error, the second is the value
    */
   getMostDiagnosticsUsers(callback) {
-    this.afs.collection('diagnostics').get().subscribe((users) => {
+    if (this.col_diagnostics == null) {
+      this.col_diagnostics = this.afs.collection('diagnostics');
+    }
+    this.col_diagnostics.get().subscribe((users) => {
       let classement = new Map<string, number>();
 
       for (const entry of users.docs) {
@@ -146,7 +163,10 @@ export class GetDataService {
    * @param callback The first parameter of the callback is the error, the second is the value
    */
   getMostPostsUsers(callback) {
-    this.afs.collection('posts').get().subscribe((users) => {
+    if (this.col_posts == null) {
+      this.col_posts = this.afs.collection('posts');
+    }
+    this.col_posts.get().subscribe((users) => {
       let classement = new Map<string, number>();
       for (const entry of users.docs) {
         classement = this._addUserToMap(entry.get('userId'), classement);
@@ -164,7 +184,10 @@ export class GetDataService {
    * @param callback callback
    */
   getMostUpvotes(callback) {
-    this.afd.object('upvotes').valueChanges().subscribe((res) => {
+    if (this.col_upvotes == null) {
+      this.col_upvotes = this.afd.object('upvotes');
+    }
+    this.col_upvotes.valueChanges().subscribe((res) => {
       callback(null, res);
     }, (err) => {
       callback(err);

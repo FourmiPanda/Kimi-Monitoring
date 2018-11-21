@@ -63,7 +63,10 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>GetDataService is used for interacting with the database</p>
+                <p>GetDataService is used for interacting with the database
+The different method use the angularfire2 api, that&#39;s why every
+element you get are Observable. It means that the value of the element
+can change over time.</p>
 
             </p>
 
@@ -72,6 +75,33 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#col_diagnostics">col_diagnostics</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#col_posts">col_posts</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#col_upvotes">col_upvotes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#col_usersInfo">col_usersInfo</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -129,7 +159,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/services/get-data.service.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/services/get-data.service.ts:35</a></div>
                             </td>
                         </tr>
 
@@ -219,7 +249,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="179" class="link-to-prism">src/app/services/get-data.service.ts:179</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="204" class="link-to-prism">src/app/services/get-data.service.ts:204</a></div>
                             </td>
                         </tr>
 
@@ -312,7 +342,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/services/get-data.service.ts:26</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/services/get-data.service.ts:49</a></div>
                             </td>
                         </tr>
 
@@ -384,7 +414,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/services/get-data.service.ts:47</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/services/get-data.service.ts:73</a></div>
                             </td>
                         </tr>
 
@@ -456,7 +486,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="128" class="link-to-prism">src/app/services/get-data.service.ts:128</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="144" class="link-to-prism">src/app/services/get-data.service.ts:144</a></div>
                             </td>
                         </tr>
 
@@ -528,7 +558,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">src/app/services/get-data.service.ts:146</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="165" class="link-to-prism">src/app/services/get-data.service.ts:165</a></div>
                             </td>
                         </tr>
 
@@ -600,7 +630,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="164" class="link-to-prism">src/app/services/get-data.service.ts:164</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="186" class="link-to-prism">src/app/services/get-data.service.ts:186</a></div>
                             </td>
                         </tr>
 
@@ -673,7 +703,7 @@ that represent userId and the number of upvotes as their value</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">src/app/services/get-data.service.ts:96</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">src/app/services/get-data.service.ts:125</a></div>
                             </td>
                         </tr>
 
@@ -764,7 +794,7 @@ that represent userId and the number of upvotes as their value</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/app/services/get-data.service.ts:74</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">src/app/services/get-data.service.ts:103</a></div>
                             </td>
                         </tr>
 
@@ -835,23 +865,236 @@ that represent userId and the number of upvotes as their value</p>
         </table>
 </section>
 
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="col_diagnostics"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            col_diagnostics
+                            </b>
+                            <a href="#col_diagnostics"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>col_diagnostics:     <code>null</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>null</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/services/get-data.service.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The &#39;diagnostics&#39; collection</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="col_posts"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            col_posts
+                            </b>
+                            <a href="#col_posts"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>col_posts:     <code>null</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>null</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/services/get-data.service.ts:25</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The &#39;posts&#39; collection</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="col_upvotes"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            col_upvotes
+                            </b>
+                            <a href="#col_upvotes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>col_upvotes:     <code>null</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>null</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/services/get-data.service.ts:35</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The &#39;upvotes&#39; collection</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="col_usersInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            col_usersInfo
+                            </b>
+                            <a href="#col_usersInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>col_usersInfo:     <code>null</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>null</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/services/get-data.service.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The &#39;usersInfo&#39; collection</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
 
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Injectable} from &#x27;@angular/core&#x27;;
-import { AngularFireDatabase } from &#x27;@angular/fire/database&#x27;;
+import {AngularFireDatabase} from &#x27;@angular/fire/database&#x27;;
 import {AngularFirestore} from &#x27;@angular/fire/firestore&#x27;;
 
 /**
  * GetDataService is used for interacting with the database
+ * The different method use the angularfire2 api, that&#x27;s why every
+ * element you get are Observable. It means that the value of the element
+ * can change over time.
  */
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 
 export class GetDataService {
+
+  /**
+   * The &#x27;usersInfo&#x27; collection
+   */
+  private col_usersInfo &#x3D; null;
+
+  /**
+   * The &#x27;posts&#x27; collection
+   */
+  private col_posts &#x3D; null;
+
+  /**
+   * The &#x27;diagnostics&#x27; collection
+   */
+  private col_diagnostics &#x3D; null;
+
+  /**
+   * The &#x27;upvotes&#x27; collection
+   */
+  private col_upvotes &#x3D; null;
 
   /**
    * constructor
@@ -866,7 +1109,10 @@ export class GetDataService {
    * @param callback  The first parameter of the callback is the error, the second is the value
    */
   getAverageAge(callback) {
-    this.afs.collection(&#x27;usersInfos&#x27;).get().subscribe((users) &#x3D;&gt; {
+    if (this.col_usersInfo &#x3D;&#x3D; null) {
+      this.col_usersInfo &#x3D; this.afs.collection(&#x27;usersInfos&#x27;);
+    }
+    this.col_usersInfo.get().subscribe((users) &#x3D;&gt; {
       let total_age &#x3D; 0;
       let nb &#x3D; 0;
       let value;
@@ -887,7 +1133,10 @@ export class GetDataService {
    * @param callback  The first parameter of the callback is the error, the second is the value
    */
   getAverageGender(callback) {
-    this.afs.collection(&#x27;usersInfos&#x27;).get().subscribe((users) &#x3D;&gt; {
+    if (this.col_usersInfo &#x3D;&#x3D; null) {
+      this.col_usersInfo &#x3D; this.afs.collection(&#x27;usersInfos&#x27;);
+    }
+    this.col_usersInfo.get().subscribe((users) &#x3D;&gt; {
       let nb_f &#x3D; 0;
       let nb_m &#x3D; 0;
       for (const entry of users.docs) {
@@ -937,7 +1186,10 @@ export class GetDataService {
    */
   getPostById(id: string, callback) {
     if (id) {
-      this.afs.collection(&#x27;posts&#x27;).doc(id).valueChanges().subscribe((post) &#x3D;&gt; {
+      if (this.col_posts &#x3D;&#x3D; null) {
+        this.col_posts &#x3D; this.afs.collection(&#x27;posts&#x27;);
+      }
+      this.col_posts.doc(id).valueChanges().subscribe((post) &#x3D;&gt; {
         return callback(null, post);
       }, (err) &#x3D;&gt; {
         return callback(err);
@@ -947,38 +1199,25 @@ export class GetDataService {
     }
   }
 
-  /*
-  getImages(callback) {
-      this.afs.collection(&#x27;image&#x27;).get().subscribe((images) &#x3D;&gt; {
-
-        let array: string[] &#x3D; [];
-
-        for (const entry of images.docs) {
-          array.push(entry.get(&quot;url&quot;));
-        }
-
-        return callback(null, array);
-      }, (err) &#x3D;&gt; {
-        return callback(err);
-      });
-  }*/
-
   /**
    * Get a map of the users as the key and the number of diagnostics send as the value
    * @param callback The first parameter of the callback is the error, the second is the value
    */
   getMostDiagnosticsUsers(callback) {
-  this.afs.collection(&#x27;diagnostics&#x27;).get().subscribe((users) &#x3D;&gt; {
-    let classement &#x3D; new Map&lt;string, number&gt;();
-
-    for (const entry of users.docs) {
-      classement &#x3D; this._addUserToMap(entry.get(&#x27;userId&#x27;), classement);
+    if (this.col_diagnostics &#x3D;&#x3D; null) {
+      this.col_diagnostics &#x3D; this.afs.collection(&#x27;diagnostics&#x27;);
     }
+    this.col_diagnostics.get().subscribe((users) &#x3D;&gt; {
+      let classement &#x3D; new Map&lt;string, number&gt;();
 
-    callback(null, classement);
-  }, (err) &#x3D;&gt; {
-    callback(err);
-  });
+      for (const entry of users.docs) {
+        classement &#x3D; this._addUserToMap(entry.get(&#x27;userId&#x27;), classement);
+      }
+
+      callback(null, classement);
+    }, (err) &#x3D;&gt; {
+      callback(err);
+    });
   }
 
   /**
@@ -986,7 +1225,10 @@ export class GetDataService {
    * @param callback The first parameter of the callback is the error, the second is the value
    */
   getMostPostsUsers(callback) {
-    this.afs.collection(&#x27;posts&#x27;).get().subscribe((users) &#x3D;&gt; {
+    if (this.col_posts &#x3D;&#x3D; null) {
+      this.col_posts &#x3D; this.afs.collection(&#x27;posts&#x27;);
+    }
+    this.col_posts.get().subscribe((users) &#x3D;&gt; {
       let classement &#x3D; new Map&lt;string, number&gt;();
       for (const entry of users.docs) {
         classement &#x3D; this._addUserToMap(entry.get(&#x27;userId&#x27;), classement);
@@ -1004,7 +1246,10 @@ export class GetDataService {
    * @param callback callback
    */
   getMostUpvotes(callback) {
-    this.afd.object(&#x27;upvotes&#x27;).valueChanges().subscribe((res) &#x3D;&gt; {
+    if (this.col_upvotes &#x3D;&#x3D; null) {
+      this.col_upvotes &#x3D; this.afd.object(&#x27;upvotes&#x27;);
+    }
+    this.col_upvotes.valueChanges().subscribe((res) &#x3D;&gt; {
       callback(null, res);
     }, (err) &#x3D;&gt; {
       callback(err);

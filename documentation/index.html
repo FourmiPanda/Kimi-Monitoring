@@ -30,18 +30,57 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="kimi-monitoring">Kimi-Monitoring</h1>
+<p align="center">
+  <h1 align="center">Kimi Monitoring</h1>
+  <p align="center">The official library for Kimi Monitoring</p>
+</p>
+
+
 <p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 6.2.5.</p>
-<h2 id="development-server">Development server</h2>
+<h2 id="what-is-kimi-monitoring-">What is Kimi Monitoring?</h2>
+<ul>
+<li><strong>Access to Firebase</strong> - Use the power of AngularFire2.</li>
+<li><strong>Clean API</strong> - Easily understandable.</li>
+<li><strong>Modular</strong> - Just add the service you want to use.</li>
+</ul>
+<h3 id="quick-links">Quick links</h3>
+<p><strong>About angularFire2</strong> - Get information about <a href="https://github.com/angular/angularfire2">angularFire2</a></p>
+<h2 id="useful-information">Useful information</h2>
+<p>In order to use the service you have to <strong><em>authenticate yourself</em></strong>.
+I&#39;ve implemented a basic authentication system.
+You can use your <strong>Google</strong>, <strong>Facebook</strong> or <strong>Twitter</strong> account to do so.</p>
+<h1 id="developer-guide">Developer Guide</h1>
+<h2 id="getting-started">Getting started</h2>
+<p>Create a component in the src/app/ folder.
+The GetDataService is provided in root. In order to
+use it, just add an attribute with the type GetDataService to your component&#39;s constructor.</p>
+<p>To configure this application for your Firebase database. You can
+modify the <code>Kimi-Monitoring\src\environments\environment.ts</code> file.</p>
+<p>To use the service call a method on the getDataService attribute.</p>
+<h3 id="example-">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import {GetDataService} from &#39;../../services/get-data.service&#39;;
+
+export class DashboardComponent {
+  //Add an attribute (getDataService) to your component
+  constructor(private getDataService: GetDataService) {}
+
+  someFunction(){
+    //Call a getDataService method
+    this.getDataService.someMethod();
+  }
+}</code></pre></div><p><strong>More Example</strong> : The DashBoardComponent and the UserComponent are example on how to use the different services.</p>
+<h2 id="useful-command">Useful command</h2>
+<h3 id="development-server">Development server</h3>
 <p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
-<h2 id="code-scaffolding">Code scaffolding</h2>
+<h3 id="code-scaffolding">Code scaffolding</h3>
 <p>Run <code>ng generate component component-name</code> to generate a new component. You can also use <code>ng generate directive|pipe|service|class|guard|interface|enum|module</code>.</p>
-<h2 id="build">Build</h2>
+<h3 id="build">Build</h3>
 <p>Run <code>ng build</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory. Use the <code>--prod</code> flag for a production build.</p>
-<h2 id="running-unit-tests">Running unit tests</h2>
+<h3 id="running-unit-tests">Running unit tests</h3>
 <p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
-<h2 id="further-help">Further help</h2>
+<h3 id="further-help">Further help</h3>
 <p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://github.com/angular/angular-cli/blob/master/README.md">Angular CLI README</a>.</p>
+<p>Feel free to use, reuse, extend, and contribute</p>
 
 
 

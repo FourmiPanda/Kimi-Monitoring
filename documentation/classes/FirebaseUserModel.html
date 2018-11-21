@@ -63,6 +63,13 @@
             <code>src/app/core/user.model.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>A user model</p>
+
+            </p>
 
 
 
@@ -112,13 +119,13 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="4" class="link-to-prism">src/app/core/user.model.ts:4</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/core/user.model.ts:18</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Create a user</p>
+                            <div class="io-description"><p>Create a user model</p>
 </div>
                     </td>
                 </tr>
@@ -158,10 +165,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="2" class="link-to-prism">src/app/core/user.model.ts:2</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/core/user.model.ts:8</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Reprsent the profile picture of the user</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -192,10 +205,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="3" class="link-to-prism">src/app/core/user.model.ts:3</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/core/user.model.ts:13</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The name of the user</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -226,10 +245,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="4" class="link-to-prism">src/app/core/user.model.ts:4</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/core/user.model.ts:18</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The provider of the user</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -246,13 +271,23 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class FirebaseUserModel {
+  /**
+   * Reprsent the profile picture of the user
+   */
   image: string;
+
+  /**
+   * The name of the user
+   */
   name: string;
+
+  /**
+   * The provider of the user
+   */
   provider: string;
 
   /**
-   * Create a user
-   *
+   * Create a user model
    */
   constructor() {
     this.image &#x3D; &#x27;&#x27;;

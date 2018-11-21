@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {GetDataService} from '../../services/get-data.service';
 
+/**
+ * The dashboard component
+ */
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -8,14 +11,20 @@ import {GetDataService} from '../../services/get-data.service';
 })
 export class DashboardComponent implements OnInit {
 
-    constructor(private getDataService: GetDataService) {
-    }
-
-  ngOnInit() {
-    this.test();
+  /**
+   * constructor
+   * @param getDataService the GetDataService
+   */
+  constructor(private getDataService: GetDataService) {
   }
 
-  test(){
+  ngOnInit() {
+  }
+
+  /**
+   * Run tests and print the result on the console
+   */
+  _test() {
     console.log('Tests :');
     this.getDataService.getAverageAge((err, res) => {
       console.log('Test getDataService ->');

@@ -1,11 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {UserService} from '../core/user.service';
 import {AuthService} from '../core/auth.service';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {FirebaseUserModel} from '../core/user.model';
 
+/**
+ * The User component
+ */
 @Component({
   selector: 'page-user',
   templateUrl: 'user.component.html',
@@ -14,8 +15,17 @@ import {FirebaseUserModel} from '../core/user.model';
 
 export class UserComponent implements OnInit {
 
+  /**
+   * This attribute represent the authenticated user
+   */
   user: FirebaseUserModel = new FirebaseUserModel();
 
+  /**
+   * constructor
+   * @param authService The authentication service
+   * @param route The Router module
+   * @param location The Location module
+   */
   constructor(
     public authService: AuthService,
     private route: ActivatedRoute,
@@ -33,6 +43,9 @@ export class UserComponent implements OnInit {
   }
 
 
+  /**
+   * Disconnected the user
+   */
   logout() {
     this.authService.doLogout()
       .then((res) => {

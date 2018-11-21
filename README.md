@@ -24,6 +24,9 @@ In order to use the service you have to ___authenticate yourself___.
 I've implemented a basic authentication system.
 You can use your **Google**, **Facebook** or **Twitter** account to do so.
 
+## Documentation
+The documentation is available in the documentation/ folder
+
 # Developer Guide
 
 ## Getting started

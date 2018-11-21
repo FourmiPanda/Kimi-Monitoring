@@ -1,8 +1,10 @@
 import {Component} from '@angular/core';
 import {AuthService} from '../core/auth.service';
-import {Router, Params} from '@angular/router';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 
+/**
+ * The login component
+ */
 @Component({
   selector: 'page-login',
   templateUrl: 'login.component.html',
@@ -10,10 +12,18 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class LoginComponent {
 
+  /**
+   * constructor
+   * @param authService The Authentication service
+   * @param router The router module
+   */
   constructor(public authService: AuthService,
               private router: Router) {
   }
 
+  /**
+   * Try to authenticate the user with a Facebook account
+   */
   tryFacebookLogin() {
     this.authService.doFacebookLogin()
       .then(res => {
@@ -21,6 +31,9 @@ export class LoginComponent {
       });
   }
 
+  /**
+   * Try to authenticate the user with a Twitter account
+   */
   tryTwitterLogin() {
     this.authService.doTwitterLogin()
       .then(res => {
@@ -28,6 +41,9 @@ export class LoginComponent {
       });
   }
 
+  /**
+   * Try to authenticate the user with a Google account
+   */
   tryGoogleLogin() {
     this.authService.doGoogleLogin()
       .then(res => {
